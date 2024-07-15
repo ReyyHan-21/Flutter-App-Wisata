@@ -46,6 +46,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/back.png
   AssetGenImage get back => const AssetGenImage('assets/images/back.png');
 
+  /// File path: assets/images/bmw.png
+  AssetGenImage get bmw => const AssetGenImage('assets/images/bmw.png');
+
   /// File path: assets/images/logo_blue.png
   AssetGenImage get logoBlue =>
       const AssetGenImage('assets/images/logo_blue.png');
@@ -64,7 +67,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [back, logoBlue, logoCwb, logoWhite, receiptCard];
+      [back, bmw, logoBlue, logoCwb, logoWhite, receiptCard];
 }
 
 class $AssetsIconsNavGen {
