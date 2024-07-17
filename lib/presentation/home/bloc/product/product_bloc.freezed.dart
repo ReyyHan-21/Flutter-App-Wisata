@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_bloc.dart';
+part of 'product_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,58 +15,58 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$LoginEvent {
+mixin _$ProductEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String email, String password) login,
+    required TResult Function() getProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String email, String password)? login,
+    TResult? Function()? getProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String email, String password)? login,
+    TResult Function()? getProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Login value) login,
+    required TResult Function(_GetProducts value) getProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Login value)? login,
+    TResult? Function(_GetProducts value)? getProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Login value)? login,
+    TResult Function(_GetProducts value)? getProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginEventCopyWith<$Res> {
-  factory $LoginEventCopyWith(
-          LoginEvent value, $Res Function(LoginEvent) then) =
-      _$LoginEventCopyWithImpl<$Res, LoginEvent>;
+abstract class $ProductEventCopyWith<$Res> {
+  factory $ProductEventCopyWith(
+          ProductEvent value, $Res Function(ProductEvent) then) =
+      _$ProductEventCopyWithImpl<$Res, ProductEvent>;
 }
 
 /// @nodoc
-class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
-    implements $LoginEventCopyWith<$Res> {
-  _$LoginEventCopyWithImpl(this._value, this._then);
+class _$ProductEventCopyWithImpl<$Res, $Val extends ProductEvent>
+    implements $ProductEventCopyWith<$Res> {
+  _$ProductEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,7 +83,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$ProductEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -97,13 +97,13 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginEvent.started()';
+    return 'ProductEvent.started()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'LoginEvent.started'));
+    properties.add(DiagnosticsProperty('type', 'ProductEvent.started'));
   }
 
   @override
@@ -119,7 +119,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String email, String password) login,
+    required TResult Function() getProducts,
   }) {
     return started();
   }
@@ -128,7 +128,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String email, String password)? login,
+    TResult? Function()? getProducts,
   }) {
     return started?.call();
   }
@@ -137,7 +137,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String email, String password)? login,
+    TResult Function()? getProducts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -150,7 +150,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Login value) login,
+    required TResult Function(_GetProducts value) getProducts,
   }) {
     return started(this);
   }
@@ -159,7 +159,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Login value)? login,
+    TResult? Function(_GetProducts value)? getProducts,
   }) {
     return started?.call(this);
   }
@@ -168,7 +168,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Login value)? login,
+    TResult Function(_GetProducts value)? getProducts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -178,116 +178,78 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   }
 }
 
-abstract class _Started implements LoginEvent {
+abstract class _Started implements ProductEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$LoginImplCopyWith<$Res> {
-  factory _$$LoginImplCopyWith(
-          _$LoginImpl value, $Res Function(_$LoginImpl) then) =
-      __$$LoginImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String email, String password});
+abstract class _$$GetProductsImplCopyWith<$Res> {
+  factory _$$GetProductsImplCopyWith(
+          _$GetProductsImpl value, $Res Function(_$GetProductsImpl) then) =
+      __$$GetProductsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoginImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginImpl>
-    implements _$$LoginImplCopyWith<$Res> {
-  __$$LoginImplCopyWithImpl(
-      _$LoginImpl _value, $Res Function(_$LoginImpl) _then)
+class __$$GetProductsImplCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res, _$GetProductsImpl>
+    implements _$$GetProductsImplCopyWith<$Res> {
+  __$$GetProductsImplCopyWithImpl(
+      _$GetProductsImpl _value, $Res Function(_$GetProductsImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? email = null,
-    Object? password = null,
-  }) {
-    return _then(_$LoginImpl(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$LoginImpl with DiagnosticableTreeMixin implements _Login {
-  const _$LoginImpl({required this.email, required this.password});
-
-  @override
-  final String email;
-  @override
-  final String password;
+class _$GetProductsImpl with DiagnosticableTreeMixin implements _GetProducts {
+  const _$GetProductsImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginEvent.login(email: $email, password: $password)';
+    return 'ProductEvent.getProducts()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'LoginEvent.login'))
-      ..add(DiagnosticsProperty('email', email))
-      ..add(DiagnosticsProperty('password', password));
+    properties.add(DiagnosticsProperty('type', 'ProductEvent.getProducts'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoginImpl &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password));
+        (other.runtimeType == runtimeType && other is _$GetProductsImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, email, password);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
-      __$$LoginImplCopyWithImpl<_$LoginImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String email, String password) login,
+    required TResult Function() getProducts,
   }) {
-    return login(email, password);
+    return getProducts();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String email, String password)? login,
+    TResult? Function()? getProducts,
   }) {
-    return login?.call(email, password);
+    return getProducts?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String email, String password)? login,
+    TResult Function()? getProducts,
     required TResult orElse(),
   }) {
-    if (login != null) {
-      return login(email, password);
+    if (getProducts != null) {
+      return getProducts();
     }
     return orElse();
   }
@@ -296,53 +258,45 @@ class _$LoginImpl with DiagnosticableTreeMixin implements _Login {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Login value) login,
+    required TResult Function(_GetProducts value) getProducts,
   }) {
-    return login(this);
+    return getProducts(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Login value)? login,
+    TResult? Function(_GetProducts value)? getProducts,
   }) {
-    return login?.call(this);
+    return getProducts?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Login value)? login,
+    TResult Function(_GetProducts value)? getProducts,
     required TResult orElse(),
   }) {
-    if (login != null) {
-      return login(this);
+    if (getProducts != null) {
+      return getProducts(this);
     }
     return orElse();
   }
 }
 
-abstract class _Login implements LoginEvent {
-  const factory _Login(
-      {required final String email,
-      required final String password}) = _$LoginImpl;
-
-  String get email;
-  String get password;
-  @JsonKey(ignore: true)
-  _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class _GetProducts implements ProductEvent {
+  const factory _GetProducts() = _$GetProductsImpl;
 }
 
 /// @nodoc
-mixin _$LoginState {
+mixin _$ProductState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AuthResponseModel authResponseModel) success,
+    required TResult Function(List<Product> products) success,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -350,7 +304,7 @@ mixin _$LoginState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AuthResponseModel authResponseModel)? success,
+    TResult? Function(List<Product> products)? success,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -358,7 +312,7 @@ mixin _$LoginState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AuthResponseModel authResponseModel)? success,
+    TResult Function(List<Product> products)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -391,16 +345,16 @@ mixin _$LoginState {
 }
 
 /// @nodoc
-abstract class $LoginStateCopyWith<$Res> {
-  factory $LoginStateCopyWith(
-          LoginState value, $Res Function(LoginState) then) =
-      _$LoginStateCopyWithImpl<$Res, LoginState>;
+abstract class $ProductStateCopyWith<$Res> {
+  factory $ProductStateCopyWith(
+          ProductState value, $Res Function(ProductState) then) =
+      _$ProductStateCopyWithImpl<$Res, ProductState>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
-    implements $LoginStateCopyWith<$Res> {
-  _$LoginStateCopyWithImpl(this._value, this._then);
+class _$ProductStateCopyWithImpl<$Res, $Val extends ProductState>
+    implements $ProductStateCopyWith<$Res> {
+  _$ProductStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -417,7 +371,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$ProductStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -431,13 +385,13 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginState.initial()';
+    return 'ProductState.initial()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'LoginState.initial'));
+    properties.add(DiagnosticsProperty('type', 'ProductState.initial'));
   }
 
   @override
@@ -454,7 +408,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AuthResponseModel authResponseModel) success,
+    required TResult Function(List<Product> products) success,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -465,7 +419,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AuthResponseModel authResponseModel)? success,
+    TResult? Function(List<Product> products)? success,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -476,7 +430,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AuthResponseModel authResponseModel)? success,
+    TResult Function(List<Product> products)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -524,7 +478,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   }
 }
 
-abstract class _Initial implements LoginState {
+abstract class _Initial implements ProductState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -537,7 +491,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$ProductStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -551,13 +505,13 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginState.loading()';
+    return 'ProductState.loading()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'LoginState.loading'));
+    properties.add(DiagnosticsProperty('type', 'ProductState.loading'));
   }
 
   @override
@@ -574,7 +528,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AuthResponseModel authResponseModel) success,
+    required TResult Function(List<Product> products) success,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -585,7 +539,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AuthResponseModel authResponseModel)? success,
+    TResult? Function(List<Product> products)? success,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -596,7 +550,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AuthResponseModel authResponseModel)? success,
+    TResult Function(List<Product> products)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -644,7 +598,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   }
 }
 
-abstract class _Loading implements LoginState {
+abstract class _Loading implements ProductState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -654,12 +608,12 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({AuthResponseModel authResponseModel});
+  $Res call({List<Product> products});
 }
 
 /// @nodoc
 class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$SuccessImpl>
+    extends _$ProductStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
@@ -668,13 +622,13 @@ class __$$SuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? authResponseModel = null,
+    Object? products = null,
   }) {
     return _then(_$SuccessImpl(
-      null == authResponseModel
-          ? _value.authResponseModel
-          : authResponseModel // ignore: cast_nullable_to_non_nullable
-              as AuthResponseModel,
+      null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
     ));
   }
 }
@@ -682,22 +636,27 @@ class __$$SuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
-  const _$SuccessImpl(this.authResponseModel);
+  const _$SuccessImpl(final List<Product> products) : _products = products;
 
+  final List<Product> _products;
   @override
-  final AuthResponseModel authResponseModel;
+  List<Product> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginState.success(authResponseModel: $authResponseModel)';
+    return 'ProductState.success(products: $products)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LoginState.success'))
-      ..add(DiagnosticsProperty('authResponseModel', authResponseModel));
+      ..add(DiagnosticsProperty('type', 'ProductState.success'))
+      ..add(DiagnosticsProperty('products', products));
   }
 
   @override
@@ -705,12 +664,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
-            (identical(other.authResponseModel, authResponseModel) ||
-                other.authResponseModel == authResponseModel));
+            const DeepCollectionEquality().equals(other._products, _products));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, authResponseModel);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
 
   @JsonKey(ignore: true)
   @override
@@ -723,10 +682,10 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AuthResponseModel authResponseModel) success,
+    required TResult Function(List<Product> products) success,
     required TResult Function(String message) error,
   }) {
-    return success(authResponseModel);
+    return success(products);
   }
 
   @override
@@ -734,10 +693,10 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AuthResponseModel authResponseModel)? success,
+    TResult? Function(List<Product> products)? success,
     TResult? Function(String message)? error,
   }) {
-    return success?.call(authResponseModel);
+    return success?.call(products);
   }
 
   @override
@@ -745,12 +704,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AuthResponseModel authResponseModel)? success,
+    TResult Function(List<Product> products)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(authResponseModel);
+      return success(products);
     }
     return orElse();
   }
@@ -793,11 +752,10 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
   }
 }
 
-abstract class _Success implements LoginState {
-  const factory _Success(final AuthResponseModel authResponseModel) =
-      _$SuccessImpl;
+abstract class _Success implements ProductState {
+  const factory _Success(final List<Product> products) = _$SuccessImpl;
 
-  AuthResponseModel get authResponseModel;
+  List<Product> get products;
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -814,7 +772,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$ProductStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -844,14 +802,14 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginState.error(message: $message)';
+    return 'ProductState.error(message: $message)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LoginState.error'))
+      ..add(DiagnosticsProperty('type', 'ProductState.error'))
       ..add(DiagnosticsProperty('message', message));
   }
 
@@ -877,7 +835,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AuthResponseModel authResponseModel) success,
+    required TResult Function(List<Product> products) success,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -888,7 +846,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AuthResponseModel authResponseModel)? success,
+    TResult? Function(List<Product> products)? success,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -899,7 +857,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AuthResponseModel authResponseModel)? success,
+    TResult Function(List<Product> products)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -947,7 +905,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   }
 }
 
-abstract class _Error implements LoginState {
+abstract class _Error implements ProductState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;

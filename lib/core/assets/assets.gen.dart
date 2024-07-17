@@ -8,18 +8,22 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/add_quantity.svg
-  String get addQuantity => 'assets/icons/add_quantity.svg';
+  SvgGenImage get addQuantity =>
+      const SvgGenImage('assets/icons/add_quantity.svg');
 
   /// File path: assets/icons/delete.svg
-  String get delete => 'assets/icons/delete.svg';
+  SvgGenImage get delete => const SvgGenImage('assets/icons/delete.svg');
 
   /// File path: assets/icons/edit.svg
-  String get edit => 'assets/icons/edit.svg';
+  SvgGenImage get edit => const SvgGenImage('assets/icons/edit.svg');
 
   /// Directory path: assets/icons/nav
   $AssetsIconsNavGen get nav => const $AssetsIconsNavGen();
@@ -28,16 +32,18 @@ class $AssetsIconsGen {
   $AssetsIconsPaymentGen get payment => const $AssetsIconsPaymentGen();
 
   /// File path: assets/icons/plus.svg
-  String get plus => 'assets/icons/plus.svg';
+  SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
 
   /// File path: assets/icons/reduce_quantity.svg
-  String get reduceQuantity => 'assets/icons/reduce_quantity.svg';
+  SvgGenImage get reduceQuantity =>
+      const SvgGenImage('assets/icons/reduce_quantity.svg');
 
   /// Directory path: assets/icons/settings
   $AssetsIconsSettingsGen get settings => const $AssetsIconsSettingsGen();
 
   /// List of all assets
-  List<String> get values => [addQuantity, delete, edit, plus, reduceQuantity];
+  List<SvgGenImage> get values =>
+      [addQuantity, delete, edit, plus, reduceQuantity];
 }
 
 class $AssetsImagesGen {
@@ -45,9 +51,6 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/back.png
   AssetGenImage get back => const AssetGenImage('assets/images/back.png');
-
-  /// File path: assets/images/bmw.png
-  AssetGenImage get bmw => const AssetGenImage('assets/images/bmw.png');
 
   /// File path: assets/images/logo_blue.png
   AssetGenImage get logoBlue =>
@@ -61,67 +64,81 @@ class $AssetsImagesGen {
   AssetGenImage get logoWhite =>
       const AssetGenImage('assets/images/logo_white.png');
 
+  /// File path: assets/images/not_valid.png
+  AssetGenImage get notValid =>
+      const AssetGenImage('assets/images/not_valid.png');
+
   /// File path: assets/images/receipt_card.png
   AssetGenImage get receiptCard =>
       const AssetGenImage('assets/images/receipt_card.png');
 
+  /// File path: assets/images/valid.png
+  AssetGenImage get valid => const AssetGenImage('assets/images/valid.png');
+
+  /// File path: assets/images/bmw.png
+  AssetGenImage get bmw => const AssetGenImage('assets/images/bmw.png');
+
   /// List of all assets
   List<AssetGenImage> get values =>
-      [back, bmw, logoBlue, logoCwb, logoWhite, receiptCard];
+      [back, logoBlue, logoCwb, logoWhite, notValid, receiptCard, valid, bmw];
 }
 
 class $AssetsIconsNavGen {
   const $AssetsIconsNavGen();
 
   /// File path: assets/icons/nav/history.svg
-  String get history => 'assets/icons/nav/history.svg';
+  SvgGenImage get history => const SvgGenImage('assets/icons/nav/history.svg');
 
   /// File path: assets/icons/nav/home.svg
-  String get home => 'assets/icons/nav/home.svg';
+  SvgGenImage get home => const SvgGenImage('assets/icons/nav/home.svg');
 
   /// File path: assets/icons/nav/scan.svg
-  String get scan => 'assets/icons/nav/scan.svg';
+  SvgGenImage get scan => const SvgGenImage('assets/icons/nav/scan.svg');
 
   /// File path: assets/icons/nav/setting.svg
-  String get setting => 'assets/icons/nav/setting.svg';
+  SvgGenImage get setting => const SvgGenImage('assets/icons/nav/setting.svg');
 
   /// File path: assets/icons/nav/ticket.svg
-  String get ticket => 'assets/icons/nav/ticket.svg';
+  SvgGenImage get ticket => const SvgGenImage('assets/icons/nav/ticket.svg');
 
   /// List of all assets
-  List<String> get values => [history, home, scan, setting, ticket];
+  List<SvgGenImage> get values => [history, home, scan, setting, ticket];
 }
 
 class $AssetsIconsPaymentGen {
   const $AssetsIconsPaymentGen();
 
   /// File path: assets/icons/payment/qris.svg
-  String get qris => 'assets/icons/payment/qris.svg';
+  SvgGenImage get qris => const SvgGenImage('assets/icons/payment/qris.svg');
 
   /// File path: assets/icons/payment/transfer.svg
-  String get transfer => 'assets/icons/payment/transfer.svg';
+  SvgGenImage get transfer =>
+      const SvgGenImage('assets/icons/payment/transfer.svg');
 
   /// File path: assets/icons/payment/tunai.svg
-  String get tunai => 'assets/icons/payment/tunai.svg';
+  SvgGenImage get tunai => const SvgGenImage('assets/icons/payment/tunai.svg');
 
   /// List of all assets
-  List<String> get values => [qris, transfer, tunai];
+  List<SvgGenImage> get values => [qris, transfer, tunai];
 }
 
 class $AssetsIconsSettingsGen {
   const $AssetsIconsSettingsGen();
 
   /// File path: assets/icons/settings/logout.svg
-  String get logout => 'assets/icons/settings/logout.svg';
+  SvgGenImage get logout =>
+      const SvgGenImage('assets/icons/settings/logout.svg');
 
   /// File path: assets/icons/settings/printer.svg
-  String get printer => 'assets/icons/settings/printer.svg';
+  SvgGenImage get printer =>
+      const SvgGenImage('assets/icons/settings/printer.svg');
 
   /// File path: assets/icons/settings/sync-data.svg
-  String get syncData => 'assets/icons/settings/sync-data.svg';
+  SvgGenImage get syncData =>
+      const SvgGenImage('assets/icons/settings/sync-data.svg');
 
   /// List of all assets
-  List<String> get values => [logout, printer, syncData];
+  List<SvgGenImage> get values => [logout, printer, syncData];
 }
 
 class Assets {
@@ -132,16 +149,11 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  });
+  const AssetGenImage(this._assetName, {this.size = null});
 
   final String _assetName;
 
   final Size? size;
-  final Set<String> flavors;
 
   Image image({
     Key? key,
@@ -167,7 +179,8 @@ class AssetGenImage {
     FilterQuality filterQuality = FilterQuality.low,
     int? cacheWidth,
     int? cacheHeight,
-  }) {
+  }) 
+  {
     return Image.asset(
       _assetName,
       key: key,
@@ -204,6 +217,71 @@ class AssetGenImage {
       _assetName,
       bundle: bundle,
       package: package,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class SvgGenImage {
+  const SvgGenImage(
+    this._assetName, {
+    this.size = null,
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size = null,
+  }) : _isVecFormat = true;
+
+  final String _assetName;
+
+  final Size? size;
+  final bool _isVecFormat;
+
+  SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    SvgTheme? theme,
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    return SvgPicture(
+      _isVecFormat
+          ? AssetBytesLoader(_assetName,
+              assetBundle: bundle, packageName: package)
+          : SvgAssetLoader(_assetName,
+              assetBundle: bundle, packageName: package),
+      key: key,
+      matchTextDirection: matchTextDirection,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      theme: theme,
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 

@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_app/data/datasources/auth_remote_datasource.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:http/http.dart';
 
 import '../../../../data/models/request/login_request_model.dart';
 import '../../../../data/models/response/auth_response_model.dart';

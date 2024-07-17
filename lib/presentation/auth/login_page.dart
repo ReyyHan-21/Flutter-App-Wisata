@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter_app/presentation/auth/bloc/login/login_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -59,11 +60,14 @@ class _LoginPageState extends State<LoginPage> {
                           listener: (context, state) {
                             state.maybeWhen(
                                 orElse:
-                                    () {}, // Jika Data Yang diproses Salah / Tidak ada maka akan diarahakan ke { error: (error) }
+                                    () {
+                                      
+                                    }, // Jika Data Yang diproses Salah / Tidak ada maka akan diarahakan ke { error: (error) }
                                 success: (data) {
+                                  AuthLocalDatasource().saveAuthData(data); // Menyimpan data login ke local storage
                                   // Jika Data Yang diproses Benar.. Maka Akan Diarah ke Halaman Main Page
-                                  context.pushReplacement(const MainPage()); 
-                                }, 
+                                  context.pushReplacement(const MainPage());
+                                },
                                 error: (error) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
