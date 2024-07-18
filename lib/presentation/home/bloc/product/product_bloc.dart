@@ -3,7 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_app/data/datasources/product_remote_datasource.dart';
 import 'package:flutter_app/data/models/response/product_response_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:http/http.dart';
+// import 'package:dartz/dartz.dart';
+// import 'package:http/http.dart';
 
 part 'product_event.dart';
 part 'product_state.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/models/response/product_response_model.dart';
+// import 'package:flutter_app/data/models/response/product_response_model.dart';
 import 'package:flutter_app/presentation/home/bloc/product/product_bloc.dart';
+import 'package:flutter_app/presentation/home/widgets/order_card.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/core.dart';
@@ -30,17 +31,18 @@ class _OrderPageState extends State<OrderPage> {
             success: (products) => products,
             orElse: () => [],
           );
+          print(products);
           if (products.isEmpty) {
             return const Center(
-              child: CircularProgressIndicator(),
+              child: Text('Belum ada data'),
             );
           }
           return ListView.separated(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             itemCount: products.length,
             separatorBuilder: (context, index) => const SpaceHeight(20),
-            itemBuilder: (context, index) => OrderPage(
-              key: products[index],
+            itemBuilder: (context, index) => OrderCard(
+              item: products[index],
             ),
           );
         },

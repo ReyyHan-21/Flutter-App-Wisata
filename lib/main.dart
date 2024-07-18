@@ -4,6 +4,7 @@ import 'package:flutter_app/data/datasources/product_remote_datasource.dart';
 import 'package:flutter_app/data/models/response/product_response_model.dart';
 import 'package:flutter_app/presentation/auth/bloc/logout/logout_bloc.dart';
 import 'package:flutter_app/presentation/auth/splash_page.dart';
+import 'package:flutter_app/presentation/home/bloc/checkout/checkout_bloc.dart';
 import 'package:flutter_app/presentation/home/bloc/product/product_bloc.dart';
 // import 'package:flutter_app/presentation/auth/login_page.dart';
 // import 'package:flutter_app/presentation/auth/splash_page.dart';
@@ -34,6 +35,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => ProductBloc(ProductRemoteDatasource()),
+        ),
+        BlocProvider(
+          create: (context) => CheckoutBloc(),
         ),
       ],
       child: MaterialApp(
